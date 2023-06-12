@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:newsapi/model/SourcesResponse.dart';
+import 'package:newsapi/screens/Categories.dart';
 import 'package:newsapi/screens/tabs_screen.dart';
 
-import 'network/remote/api_manager.dart';
+import '../network/remote/api_manager.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String routName = "homeScreen";
@@ -52,7 +53,8 @@ class HomeScreen extends StatelessWidget {
             );
           }
           var sources = snapshot.data?.sources ?? [];
-          return TabsScreen(sources);
+          return CategoriesScreen();
+            //TabsScreen(sources);
         },
       ),
     );
